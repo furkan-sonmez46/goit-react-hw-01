@@ -1,29 +1,29 @@
-import './Profile.module.css';
+import css from './Profile.module.css';
 
 export default function Profile({ name, tag, location, image, stats }) {
   return (
-    <div className="profile-container">
-      <div className="profile-top-container">
-        <div className="profile-img-container">
-          <img className="profile-img" src={image} alt={name} />
+    <div className={css.profileContainer}>
+      <div className={css.profileTopContainer}>
+        <div className={css.profileImgContainer}>
+          <img className={css.profileImg} src={image} alt={name} />
         </div>
-        <div className="profile-info-container">
-          <p className="info name">{name}</p>
-          <p className="info tag">@{tag}</p>
-          <p className="info location">{location}</p>
+        <div className={css.profileInfoContainer}>
+          <p className={css.name}>{name}</p>
+          <p className={css.ptaglctn}>@{tag}</p>
+          <p className={css.ptaglctn}>{location}</p>
         </div>
       </div>
 
-      <ul className="profile-footer-container">
-        <li className="profile-li">
+      <ul className={css.profileFooterContainer}>
+        <li className={css.profileLi}>
           <span>Followers</span>
           <span className="stat">{stats.followers}</span>
         </li>
-        <li className="profile-li">
+        <li className={css.profileLi}>
           <span>Views</span>
           <span className="stat">{stats.views}</span>
         </li>
-        <li className="profile-li">
+        <li className={css.profileLi}>
           <span>Likes</span>
           <span className="stat">{stats.likes}</span>
         </li>
