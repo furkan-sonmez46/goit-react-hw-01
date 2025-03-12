@@ -1,10 +1,8 @@
-import './TransactionHistory.module.css';
+import css from './TransactionHistory.module.css';
 
-export default function TransactionHistory({ items }) {
-  console.log(items);
-
+const TransactionHistory = ({ items }) => {
   return (
-    <table>
+    <table className={`${css.transactions}`}>
       <thead>
         <tr>
           <th>Type</th>
@@ -12,18 +10,19 @@ export default function TransactionHistory({ items }) {
           <th>Currency</th>
         </tr>
       </thead>
-
       <tbody>
-        {items.map(item => (
-          <tr key={item.id}>
-            <td>{`${item.type.charAt(0).toUpperCase()}${item.type.slice(
-              1
-            )}`}</td>
-            <td>{item.amount}</td>
-            <td>{item.currency}</td>
-          </tr>
-        ))}
+        {items.map(i => {
+          return (
+            <tr key={i.id}>
+              <td>{i.type}</td>
+              <td>{i.amount}</td>
+              <td>{i.currency}</td>
+            </tr>
+          );
+        })}
       </tbody>
     </table>
   );
-}
+};
+
+export default TransactionHistory;
