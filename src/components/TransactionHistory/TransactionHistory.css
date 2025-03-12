@@ -1,0 +1,22 @@
+table {
+  width: 700px;
+  border-collapse: collapse;
+  margin: auto;
+  margin-bottom: 25px;
+}
+
+thead {
+  background-color: black;
+  color: #fff;
+}
+
+tbody tr:nth-child(even) {
+  background-color: gray;
+}
+
+td,
+th {
+  padding: 5px;
+  text-align: center;
+  border: 1px solid black;
+}
