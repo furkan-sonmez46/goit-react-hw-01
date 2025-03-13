@@ -17,15 +17,15 @@ export default function Profile({ name, tag, location, image, stats }) {
       <ul className={css.profileFooterContainer}>
         <li className={css.profileLi}>
           <span>Followers</span>
-          <span className="stat">{stats.followers}</span>
+          <span className={css.stat}>{stats.followers}</span>
         </li>
         <li className={css.profileLi}>
           <span>Views</span>
-          <span className="stat">{stats.views}</span>
+          <span className={css.stat}>{stats.views}</span>
         </li>
         <li className={css.profileLi}>
           <span>Likes</span>
-          <span className="stat">{stats.likes}</span>
+          <span className={css.stat}>{stats.likes}</span>
         </li>
       </ul>
     </div>
